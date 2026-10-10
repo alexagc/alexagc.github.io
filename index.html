@@ -1,36 +1,481 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>alexagc.github.io</title>
-  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Gómez Canal — Platform Lead & Solutions Architect</title>
+  <meta name="description" content="Alejandro Gómez Canal (@alexagc). Platform Lead y Solutions Architect con +14 años de experiencia en ingeniería de plataformas, Kubernetes, arquitecturas distribuidas, AWS y Keycloak IAM.">
+  <link rel="canonical" href="https://alexagc.github.io">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="theme-color" content="#1976d2">
-  <script>
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-106397567-1', 'auto');
-  ga('send', 'pageview');
+  <!-- Open Graph / Social Cards -->
+  <meta property="og:title" content="Alejandro Gómez Canal — Platform Lead & Solutions Architect">
+  <meta property="og:description" content="Ingeniería de plataformas, arquitectura cloud distribuida y sistemas de identidad empresarial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alexagc.github.io">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PCZWFVXL');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Schema.org JSON-LD para indexación enriquecida en Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alejandro Gómez Canal",
+    "jobTitle": "Platform Lead & Solutions Architect",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Universia (Banco Santander)"
+    },
+    "url": "https://alexagc.github.io",
+    "sameAs": [
+      "https://www.linkedin.com/in/alejandro-gomez-canal-78514390/",
+      "https://github.com/alexagc"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Madrid",
+      "addressCountry": "ES"
+    }
+  }
   </script>
-<link rel="stylesheet" href="styles.1d3261dbc58b55544624.css"></head>
 
+  <!-- Modern Typography (Geist / Inter / JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <app-root></app-root>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.2f4a59095805af02bd79.js"></script><script type="text/javascript" src="main.fff126744268768a8ada.js"></script></body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCZWFVXL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Ambient background glow & Interactive Spotlight -->
+  <div class="ambient-light"></div>
+  <div class="spotlight" id="cursor-spotlight"></div>
 
+  <!-- Header imprimible (solo visible en PDF / @media print) -->
+  <div class="print-header">
+    <h1 class="print-name">Alejandro Gómez Canal</h1>
+    <div class="print-subtitle">Platform Lead & Solutions Architect · SRE | Madrid, Spain</div>
+    <div class="print-contact">
+      <span>alexcanal@gmail.com</span> · 
+      <span>https://alexagc.github.io</span> · 
+      <span>linkedin.com/in/alejandro-gomez-canal-78514390</span>
+    </div>
+  </div>
+
+  <!-- Header Sticky -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="brand">
+        <span class="brand-avatar">AG</span>
+        <span class="brand-text">alexagc</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#about" class="nav-link" data-i18n="nav_about">Sobre Mí</a>
+        <a href="#case-study" class="nav-link" data-i18n="nav_case_study">Casos de Éxito</a>
+        <a href="#stack" class="nav-link" data-i18n="nav_architecture">Arquitectura</a>
+        <a href="#experience" class="nav-link" data-i18n="nav_experience">Trayectoria</a>
+        <a href="#projects" class="nav-link" data-i18n="nav_projects">Proyectos</a>
+      </nav>
+
+      <div class="header-right">
+        <!-- Language Switcher -->
+        <div class="lang-switch" id="lang-switch" role="group" aria-label="Selector de idioma">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <a href="https://www.linkedin.com/in/alejandro-gomez-canal-78514390/" target="_blank" rel="noopener noreferrer" class="link-btn tracking-outbound" data-tracking="linkedin_header">
+          LinkedIn ↗
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="status-chip">
+        <span class="status-indicator"></span>
+        <span data-i18n="hero_status">Platform Lead @ Universia · Madrid</span>
+      </div>
+
+      <h1 class="hero-heading">
+        Alejandro Gómez Canal
+      </h1>
+
+      <p class="hero-bio" data-i18n="hero_bio">
+        Ingeniero de software y arquitecto de soluciones con <strong>+14 años de trayectoria</strong> diseñando plataformas cloud distribuidas, gobernanza de identidades y sistemas de alta concurrencia. Enfocado en la resiliencia técnica, la estandarización y el impacto en equipos de ingeniería.
+      </p>
+
+      <div class="hero-actions">
+        <!-- Copiar Email -->
+        <button class="cta-primary" id="copy-email-btn" data-email="alexcanal@gmail.com" aria-label="Copiar correo">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span id="copy-text" data-i18n="copy_email">Copiar alexcanal@gmail.com</span>
+        </button>
+
+        <!-- Descargar / Imprimir CV -->
+        <button class="cta-secondary" id="print-cv-btn" aria-label="Descargar o imprimir versión CV">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span data-i18n="print_cv">Descargar CV (PDF)</span>
+        </button>
+
+        <!-- GitHub -->
+        <a href="https://github.com/alexagc" target="_blank" rel="noopener noreferrer" class="cta-secondary tracking-outbound" data-tracking="github_hero">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <span>GitHub / alexagc</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 2026: ARCHITECTURE CASE STUDY (HIGH SIGNAL) -->
+    <section class="section" id="case-study">
+      <div class="section-label" data-i18n="casestudy_section_label">ARQUITECTURA EN PRODUCCIÓN</div>
+      <h2 class="section-heading" data-i18n="casestudy_section_heading">Caso de Estudio: Plataforma Cloud & Ecosistema IAM</h2>
+
+      <div class="case-study-card">
+        <div class="case-header">
+          <div class="case-badge" data-i18n="casestudy_badge">PROYECTO CRÍTICO · BANCO SANTANDER ECOSYSTEM</div>
+          <h3 class="case-title" data-i18n="casestudy_title">Modernización de Plataforma de Identidad y Malla de Servicios Multi-Tenant</h3>
+          <p class="case-summary" data-i18n="casestudy_summary">
+            Diseño e implantación de una arquitectura de plataforma Zero-Trust para unificar el acceso corporativo, federación de identidades y microservicios con alta concurrencia.
+          </p>
+        </div>
+
+        <div class="case-metrics-bar">
+          <div class="case-metric">
+            <span class="metric-val">99.99%</span>
+            <span class="metric-lbl" data-i18n="metric_sla">Disponibilidad en picos</span>
+          </div>
+          <div class="case-metric">
+            <span class="metric-val">&lt; 15ms</span>
+            <span class="metric-lbl" data-i18n="metric_latency">Latencia p99 Auth/Gateway</span>
+          </div>
+          <div class="case-metric">
+            <span class="metric-val">-40%</span>
+            <span class="metric-lbl" data-i18n="metric_time">Tiempo de despliegue (GitOps)</span>
+          </div>
+          <div class="case-metric">
+            <span class="metric-val">+100M</span>
+            <span class="metric-lbl" data-i18n="metric_reqs">Peticiones mensuales gestionadas</span>
+          </div>
+        </div>
+
+        <div class="case-details-grid">
+          <div class="case-col">
+            <div class="case-col-title" data-i18n="case_challenge_title">⚠️ El Desafío</div>
+            <p class="case-col-desc" data-i18n="case_challenge_desc">
+              Fragmentación de sistemas de autenticación legacy, cuellos de botella en el gateway centralizado ante picos masivos de matrícula universitaria y necesidad de auditoría de seguridad bancaria estricta.
+            </p>
+          </div>
+          <div class="case-col">
+            <div class="case-col-title" data-i18n="case_solution_title">⚡ Arquitectura Implementada</div>
+            <p class="case-col-desc" data-i18n="case_solution_desc">
+              Federación de identidad con Keycloak (OIDC/OAuth2) desacoplada con clúster Redis, malla de servicios Istio para mTLS y observabilidad integral en Kubernetes (AWS EKS), con Kong Gateway perimetral.
+            </p>
+          </div>
+          <div class="case-col">
+            <div class="case-col-title" data-i18n="case_impact_title">🎯 Impacto Técnico & Negocio</div>
+            <p class="case-col-desc" data-i18n="case_impact_desc">
+              Estandarización de plantillas Helm y pipelines CI/CD que redujeron el onboarding de nuevos microservicios a minutos con compliance de seguridad automático.
+            </p>
+          </div>
+        </div>
+
+        <div class="case-stack-pills">
+          <span class="case-pill">AWS EKS</span>
+          <span class="case-pill">Istio Service Mesh</span>
+          <span class="case-pill">Keycloak IAM</span>
+          <span class="case-pill">Kong Gateway</span>
+          <span class="case-pill">Apache Kafka</span>
+          <span class="case-pill">Prometheus & Grafana</span>
+          <span class="case-pill">Helm / GitOps</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Bento Grid (Stack & Vision) -->
+    <section class="bento-grid" id="stack">
+      <!-- Bento Card 1: Core Domains -->
+      <div class="bento-card col-span-2">
+        <div class="card-meta" data-i18n="bento_meta_arch">01 / ARQUITECTURA</div>
+        <h2 class="card-title" data-i18n="bento_title_arch">Especialización de Plataforma</h2>
+        <p class="card-desc" data-i18n="bento_desc_arch">
+          Liderazgo y diseño de sistemas distribuidos empresariales combinando infraestructura Cloud Native, seguridad perimetral y desarrollo ágil.
+        </p>
+        <div class="pill-group">
+          <span class="tech-pill">Kubernetes</span>
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">Istio Service Mesh</span>
+          <span class="tech-pill">Keycloak (IAM/SSO)</span>
+          <span class="tech-pill">Kong API Gateway</span>
+          <span class="tech-pill">gRPC & REST</span>
+          <span class="tech-pill">Apache Kafka</span>
+          <span class="tech-pill">Node.js / Go</span>
+          <span class="tech-pill">Prometheus & Grafana</span>
+        </div>
+      </div>
+
+      <!-- Bento Card 2: Metrics / Quick Facts -->
+      <div class="bento-card">
+        <div class="card-meta" data-i18n="bento_meta_exp">02 / TRAYECTORIA</div>
+        <div class="stat-number">+14</div>
+        <div class="stat-label" data-i18n="bento_stat_label">Años en ingeniería de software</div>
+        <div class="sub-stat" data-i18n="bento_sub_stat">De desarrollo frontend en 2012 a Platform Lead en 2026.</div>
+      </div>
+
+      <!-- Bento Card 3: Philosophy -->
+      <div class="bento-card">
+        <div class="card-meta" data-i18n="bento_meta_principles">03 / PRINCIPIOS</div>
+        <h3 class="card-title" data-i18n="bento_title_principles">Criterio Técnico</h3>
+        <ul class="clean-list">
+          <li data-i18n="principle_1"><strong>Estandarización:</strong> Frameworks y scaffolding comunes para multiplicar la velocidad del equipo.</li>
+          <li data-i18n="principle_2"><strong>Automatización:</strong> Todo proceso manual repetitivo se codifica en pipelines CI/CD o charts de Helm.</li>
+          <li data-i18n="principle_3"><strong>Observabilidad:</strong> Telemetría y métricas antes de escalar para prevenir fallos proactivamente.</li>
+        </ul>
+      </div>
+
+      <!-- Bento Card 4: Architecture Highlights -->
+      <div class="bento-card col-span-2">
+        <div class="card-meta" data-i18n="bento_meta_systems">04 / SISTEMAS CRÍTICOS</div>
+        <div class="architecture-grid">
+          <div class="arch-box">
+            <h4 data-i18n="arch_box_1_title">Cloud & Kubernetes</h4>
+            <p data-i18n="arch_box_1_desc">Orquestación en producción en AWS con Helm, Kops, Ansible y mTLS mediante Istio.</p>
+          </div>
+          <div class="arch-box">
+            <h4 data-i18n="arch_box_2_title">Identidad & Seguridad</h4>
+            <p data-i18n="arch_box_2_desc">SSO corporativo, federación OIDC/OAuth 2.0 con Keycloak y protección perimetral con Kong.</p>
+          </div>
+          <div class="arch-box">
+            <h4 data-i18n="arch_box_3_title">Microservicios & Eventos</h4>
+            <p data-i18n="arch_box_3_desc">APIs de baja latencia con gRPC, Node.js, Go y streaming distribuido desacoplado con Kafka.</p>
+          </div>
+          <div class="arch-box">
+            <h4 data-i18n="arch_box_4_title">SRE & Resiliencia</h4>
+            <p data-i18n="arch_box_4_desc">Monitorización en Prometheus/Grafana, mutation testing con Pitest y control SonarQube.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Timeline Section -->
+    <section class="section" id="experience">
+      <div class="section-label" data-i18n="timeline_section_label">EXPERIENCIA</div>
+      <h2 class="section-heading" data-i18n="timeline_section_heading">Evolución Profesional</h2>
+
+      <div class="timeline">
+        <!-- Universia Lead -->
+        <div class="timeline-row">
+          <div class="timeline-period">2023 — <span data-i18n="present">Presente</span></div>
+          <div class="timeline-body">
+            <div class="timeline-role-group">
+              <h3 class="timeline-role">Platform Lead | Solutions Architect</h3>
+              <span class="timeline-company">Universia (Banco Santander)</span>
+            </div>
+            <p class="timeline-text" data-i18n="exp_universia_lead">
+              Liderazgo transversal del equipo de plataforma (perfiles de ingeniería de datos, infraestructura cloud y desarrollo). Definición de la estrategia técnica, arquitecturas de referencia y soporte continuo a la escalabilidad operativa.
+            </p>
+            <div class="timeline-tags">
+              <span>Platform Engineering</span>
+              <span>Cloud Architecture</span>
+              <span>Data Platforms</span>
+              <span>Kubernetes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Universia SRE -->
+        <div class="timeline-row">
+          <div class="timeline-period">2022 — 2023</div>
+          <div class="timeline-body">
+            <div class="timeline-role-group">
+              <h3 class="timeline-role">Solutions Architect | SRE</h3>
+              <span class="timeline-company">Universia</span>
+            </div>
+            <p class="timeline-text" data-i18n="exp_universia_sre">
+              Garantía de fiabilidad, observabilidad con Prometheus/Grafana y resiliencia de servicios productivos en la nube.
+            </p>
+          </div>
+        </div>
+
+        <!-- Kairos -->
+        <div class="timeline-row">
+          <div class="timeline-period">2018 — 2022</div>
+          <div class="timeline-body">
+            <div class="timeline-role-group">
+              <h3 class="timeline-role">Solutions Architect | SRE</h3>
+              <span class="timeline-company">Kairós Digital Solutions S.L.</span>
+            </div>
+            <p class="timeline-text" data-i18n="exp_kairos">
+              Diseño de plataforma de microservicios (Node.js con REST y gRPC), clústeres de Kubernetes en AWS gestionados con Helm, Service Mesh con Istio, gestión de identidades corporativas con Keycloak y Kong Gateway.
+            </p>
+            <div class="timeline-tags">
+              <span>Kubernetes</span>
+              <span>AWS</span>
+              <span>Keycloak</span>
+              <span>Kong</span>
+              <span>Istio</span>
+              <span>gRPC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA Group -->
+        <div class="timeline-row">
+          <div class="timeline-period">2016 — 2018</div>
+          <div class="timeline-body">
+            <div class="timeline-role-group">
+              <h3 class="timeline-role" data-i18n="role_dia">Arquitecto Frontend & QA</h3>
+              <span class="timeline-company">Grupo DIA</span>
+            </div>
+            <p class="timeline-text" data-i18n="exp_dia">
+              Evolución hacia Web Components y Angular, testing de mutación (Pitest), Error-Prone y soporte a servicios Java 8 / Spring 4.
+            </p>
+          </div>
+        </div>
+
+        <!-- Atos -->
+        <div class="timeline-row">
+          <div class="timeline-period">2012 — 2015</div>
+          <div class="timeline-body">
+            <div class="timeline-role-group">
+              <h3 class="timeline-role">Software Developer</h3>
+              <span class="timeline-company">Atos Worldgrid</span>
+            </div>
+            <p class="timeline-text" data-i18n="exp_atos">
+              POC para Endesa en detección de fraude eléctrico con Big Data. Backend en Scala (Scalatra, Slick), front en AngularJS y Oracle PL/SQL.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section with Interactive Category Filter -->
+    <section class="section" id="projects">
+      <div class="section-label" data-i18n="projects_section_label">CÓDIGO & REPOSITORIOS</div>
+      <div class="projects-header-flex">
+        <h2 class="section-heading" data-i18n="projects_section_heading">Proyectos Destacados</h2>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-bar" role="group" aria-label="Filtro de proyectos">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+          <button class="filter-btn" data-filter="cloud" data-i18n="filter_cloud">Cloud & Infra</button>
+          <button class="filter-btn" data-filter="backend" data-i18n="filter_backend">Backend & APIs</button>
+          <button class="filter-btn" data-filter="perf" data-i18n="filter_perf">SRE & Profiling</button>
+        </div>
+      </div>
+
+      <div class="projects-container">
+        <!-- Project 1: OAuth Server -->
+        <a href="https://github.com/alexagc/node-oauth-server" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="backend cloud" data-tracking="repo_node_oauth">
+          <div class="project-info">
+            <div class="project-name">
+              <span>node-oauth-server</span>
+              <span class="external-arrow">↗</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_oauth_desc">Servidor OAuth 2.0 modular en Node.js con almacenamiento de tokens en Redis y Docker.</p>
+          </div>
+          <div class="project-chips">
+            <span>Node.js</span>
+            <span>OAuth2</span>
+            <span>Redis</span>
+            <span>Docker</span>
+          </div>
+        </a>
+
+        <!-- Project 2: Performance Benchmarking -->
+        <a href="https://github.com/alexagc/nodejs-performance" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="backend perf" data-tracking="repo_nodejs_performance">
+          <div class="project-info">
+            <div class="project-name">
+              <span>nodejs-performance</span>
+              <span class="external-arrow">↗</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_perf_desc">Benchmarks y profiling del event loop para optimizar rendimiento y memoria en Node.</p>
+          </div>
+          <div class="project-chips">
+            <span>JavaScript</span>
+            <span>Profiling</span>
+            <span>Event Loop</span>
+          </div>
+        </a>
+
+        <!-- Project 3: Go sandbox -->
+        <a href="https://github.com/alexagc/go4fun" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="backend perf" data-tracking="repo_go4fun">
+          <div class="project-info">
+            <div class="project-name">
+              <span>go4fun</span>
+              <span class="external-arrow">↗</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_go_desc">Laboratorio en Golang enfocado en patrones concurrentes, canales y rendimiento nativo.</p>
+          </div>
+          <div class="project-chips">
+            <span>Go</span>
+            <span>Concurrency</span>
+            <span>Channels</span>
+          </div>
+        </a>
+
+        <!-- Project 4: Git-Flow Tooling -->
+        <a href="https://github.com/alexagc/git-flow" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="cloud" data-tracking="repo_git_flow">
+          <div class="project-info">
+            <div class="project-name">
+              <span>git-flow</span>
+              <span class="external-arrow">↗</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_gitflow_desc">Contenedor Alpine ligero con utilidades para flujos de ramificación GitFlow en pipelines de CI/CD.</p>
+          </div>
+          <div class="project-chips">
+            <span>Docker</span>
+            <span>GitFlow</span>
+            <span>CI/CD</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Banner -->
+    <section class="connect-box">
+      <div class="connect-content">
+        <h2 class="connect-title" data-i18n="connect_title">¿Conversamos?</h2>
+        <p class="connect-desc" data-i18n="connect_desc">
+          Siempre con interés en intercambiar perspectivas sobre ingeniería de plataforma, Kubernetes, sistemas distribuidos o retos técnicos.
+        </p>
+        <div class="connect-links">
+          <a href="https://www.linkedin.com/in/alejandro-gomez-canal-78514390/" target="_blank" rel="noopener noreferrer" class="cta-primary tracking-outbound" data-tracking="linkedin_connect" data-i18n="connect_linkedin">
+            Perfil de LinkedIn ↗
+          </a>
+          <a href="mailto:alexcanal@gmail.com" class="cta-secondary tracking-outbound" data-tracking="mailto_connect">
+            alexcanal@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Alejandro Gómez Canal · Madrid, Spain</span>
+      <div class="footer-meta">
+        <a href="https://github.com/alexagc" target="_blank" rel="noopener" class="tracking-outbound" data-tracking="github_footer">GitHub</a>
+        <a href="https://www.linkedin.com/in/alejandro-gomez-canal-78514390/" target="_blank" rel="noopener" class="tracking-outbound" data-tracking="linkedin_footer">LinkedIn</a>
+        <a href="mailto:alexcanal@gmail.com" class="tracking-outbound" data-tracking="email_footer">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
 </html>
