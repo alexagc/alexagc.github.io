@@ -281,6 +281,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Desregistrar Service Workers antiguos de Angular (evita problemas de caché con la versión anterior)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (const registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+
   // 7. Developer Console Signature
   console.log(
     '%c alexagc %c Platform Lead & Solutions Architect · SRE ',
