@@ -362,86 +362,87 @@
       </div>
     </section>
 
-    <!-- Projects Section with Interactive Category Filter -->
+    <!-- Projects & Architecture Section -->
     <section class="section" id="projects">
-      <div class="section-label" data-i18n="projects_section_label">CÓDIGO & REPOSITORIOS</div>
+      <div class="section-label" data-i18n="projects_section_label">CÓDIGO & PLATAFORMAS</div>
       <div class="projects-header-flex">
-        <h2 class="section-heading" data-i18n="projects_section_heading">Proyectos Destacados</h2>
+        <h2 class="section-heading" data-i18n="projects_section_heading">Proyectos & Arquitecturas</h2>
         
         <!-- Filter Tabs -->
         <div class="filter-bar" role="group" aria-label="Filtro de proyectos">
           <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
-          <button class="filter-btn" data-filter="cloud" data-i18n="filter_cloud">Cloud & Infra</button>
-          <button class="filter-btn" data-filter="backend" data-i18n="filter_backend">Backend & APIs</button>
-          <button class="filter-btn" data-filter="perf" data-i18n="filter_perf">SRE & Profiling</button>
+          <button class="filter-btn" data-filter="opensource" data-i18n="filter_opensource">Open Source</button>
+          <button class="filter-btn" data-filter="platform" data-i18n="filter_platform">Plataforma Cloud</button>
+          <button class="filter-btn" data-filter="security" data-i18n="filter_security">IAM & Seguridad</button>
         </div>
       </div>
 
       <div class="projects-container">
-        <!-- Project 1: OAuth Server -->
-        <a href="https://github.com/alexagc/node-oauth-server" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="backend cloud" data-tracking="repo_node_oauth">
+        <!-- Project 1: alexagc.github.io (Open Source Web) -->
+        <a href="https://github.com/alexagc/alexagc.github.io" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="opensource platform" data-tracking="repo_portfolio">
           <div class="project-info">
             <div class="project-name">
-              <span>node-oauth-server</span>
+              <span>alexagc.github.io</span>
               <span class="external-arrow">↗</span>
             </div>
-            <p class="project-detail" data-i18n="proj_oauth_desc">Servidor OAuth 2.0 modular en Node.js con almacenamiento de tokens en Redis y Docker.</p>
+            <p class="project-detail" data-i18n="proj_portfolio_desc">Portfolio web de ingeniería y showcase de arquitectura. Estética craft sin dependencias, telemetría con GTM y despliegue continuo con GitHub Actions.</p>
           </div>
           <div class="project-chips">
-            <span>Node.js</span>
-            <span>OAuth2</span>
+            <span>Vanilla JS</span>
+            <span>GTM / GA4</span>
+            <span>GitHub Actions</span>
+            <span>CSS Craft</span>
+          </div>
+        </a>
+
+        <!-- Project 2: Zero-Trust IAM & Mesh Blueprint -->
+        <a href="#case-study" class="project-item tracking-outbound" data-category="platform security" data-tracking="view_case_study_mesh">
+          <div class="project-info">
+            <div class="project-name">
+              <span data-i18n="proj_iam_mesh_title">Zero-Trust IAM & Service Mesh Architecture</span>
+              <span class="external-arrow">↓</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_iam_mesh_desc">Arquitectura de referencia para gobernanza de identidades (Keycloak SSO), control perimetral con Kong y mTLS en Kubernetes con Istio Service Mesh.</p>
+          </div>
+          <div class="project-chips">
+            <span>Keycloak</span>
+            <span>Istio Mesh</span>
+            <span>Kong API</span>
+            <span>Kubernetes</span>
+          </div>
+        </a>
+
+        <!-- Project 3: Event-Driven Microservices Blueprint -->
+        <div class="project-item" data-category="platform" style="cursor: default;">
+          <div class="project-info">
+            <div class="project-name">
+              <span data-i18n="proj_event_title">High-Throughput Distributed Event Streams</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_event_desc">Diseño de microservicios desacoplados de alto rendimiento con Apache Kafka, Redis cluster y gRPC para plataformas corporativas multi-tenant.</p>
+          </div>
+          <div class="project-chips">
+            <span>Apache Kafka</span>
             <span>Redis</span>
-            <span>Docker</span>
+            <span>gRPC</span>
+            <span>Node.js / Go</span>
           </div>
-        </a>
+        </div>
 
-        <!-- Project 2: Performance Benchmarking -->
-        <a href="https://github.com/alexagc/nodejs-performance" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="backend perf" data-tracking="repo_nodejs_performance">
+        <!-- Project 4: Cloud-Native Platform Scaffolding -->
+        <div class="project-item" data-category="platform security" style="cursor: default;">
           <div class="project-info">
             <div class="project-name">
-              <span>nodejs-performance</span>
-              <span class="external-arrow">↗</span>
+              <span data-i18n="proj_gitops_title">Cloud-Native Platform Scaffolding & GitOps</span>
             </div>
-            <p class="project-detail" data-i18n="proj_perf_desc">Benchmarks y profiling del event loop para optimizar rendimiento y memoria en Node.</p>
+            <p class="project-detail" data-i18n="proj_gitops_desc">Estandarización de infraestructura y charts de Helm sobre AWS EKS con compliance bancario, observabilidad Prometheus y pipelines CI/CD automatizados.</p>
           </div>
           <div class="project-chips">
-            <span>JavaScript</span>
-            <span>Profiling</span>
-            <span>Event Loop</span>
+            <span>AWS EKS</span>
+            <span>Helm</span>
+            <span>GitOps</span>
+            <span>Prometheus</span>
           </div>
-        </a>
-
-        <!-- Project 3: Go sandbox -->
-        <a href="https://github.com/alexagc/go4fun" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="backend perf" data-tracking="repo_go4fun">
-          <div class="project-info">
-            <div class="project-name">
-              <span>go4fun</span>
-              <span class="external-arrow">↗</span>
-            </div>
-            <p class="project-detail" data-i18n="proj_go_desc">Laboratorio en Golang enfocado en patrones concurrentes, canales y rendimiento nativo.</p>
-          </div>
-          <div class="project-chips">
-            <span>Go</span>
-            <span>Concurrency</span>
-            <span>Channels</span>
-          </div>
-        </a>
-
-        <!-- Project 4: Git-Flow Tooling -->
-        <a href="https://github.com/alexagc/git-flow" target="_blank" rel="noopener noreferrer" class="project-item tracking-outbound" data-category="cloud" data-tracking="repo_git_flow">
-          <div class="project-info">
-            <div class="project-name">
-              <span>git-flow</span>
-              <span class="external-arrow">↗</span>
-            </div>
-            <p class="project-detail" data-i18n="proj_gitflow_desc">Contenedor Alpine ligero con utilidades para flujos de ramificación GitFlow en pipelines de CI/CD.</p>
-          </div>
-          <div class="project-chips">
-            <span>Docker</span>
-            <span>GitFlow</span>
-            <span>CI/CD</span>
-          </div>
-        </a>
+        </div>
       </div>
     </section>
 
