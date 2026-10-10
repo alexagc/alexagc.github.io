@@ -215,15 +215,20 @@
           Liderazgo y diseño de sistemas distribuidos empresariales combinando infraestructura Cloud Native, seguridad perimetral y desarrollo ágil.
         </p>
         <div class="pill-group">
-          <span class="tech-pill">Kubernetes</span>
-          <span class="tech-pill">AWS</span>
-          <span class="tech-pill">Istio Service Mesh</span>
+          <span class="tech-pill">AWS (EKS, Lambda)</span>
+          <span class="tech-pill">Kubernetes & Helm</span>
+          <span class="tech-pill">Cilium (eBPF CNI/Mesh)</span>
+          <span class="tech-pill">Terraform / Terragrunt</span>
+          <span class="tech-pill">GitOps (ArgoCD)</span>
+          <span class="tech-pill">Apache APISIX</span>
+          <span class="tech-pill">Traefik</span>
+          <span class="tech-pill">Kong / Apigee</span>
           <span class="tech-pill">Keycloak (IAM/SSO)</span>
-          <span class="tech-pill">Kong API Gateway</span>
-          <span class="tech-pill">gRPC & REST</span>
+          <span class="tech-pill">Node.js Framework Design</span>
+          <span class="tech-pill">TypeScript / Java / Python</span>
           <span class="tech-pill">Apache Kafka</span>
-          <span class="tech-pill">Node.js / Go</span>
-          <span class="tech-pill">Prometheus & Grafana</span>
+          <span class="tech-pill">OpenTelemetry & Datadog</span>
+          <span class="tech-pill">FinOps Governance</span>
         </div>
       </div>
 
@@ -251,20 +256,20 @@
         <div class="card-meta" data-i18n="bento_meta_systems">04 / SISTEMAS CRÍTICOS</div>
         <div class="architecture-grid">
           <div class="arch-box">
-            <h4 data-i18n="arch_box_1_title">Cloud & Kubernetes</h4>
-            <p data-i18n="arch_box_1_desc">Orquestación en producción en AWS con Helm, Kops, Ansible y mTLS mediante Istio.</p>
+            <h4 data-i18n="arch_box_1_title">Frameworks Core & DevEx</h4>
+            <p data-i18n="arch_box_1_desc">Diseño de frameworks internos en Node.js/TypeScript, portales de autoservicio (IDP) y GitOps (ArgoCD).</p>
           </div>
           <div class="arch-box">
-            <h4 data-i18n="arch_box_2_title">Identidad & Seguridad</h4>
-            <p data-i18n="arch_box_2_desc">SSO corporativo, federación OIDC/OAuth 2.0 con Keycloak y protección perimetral con Kong.</p>
+            <h4 data-i18n="arch_box_2_title">Cloud Native & Cilium eBPF</h4>
+            <p data-i18n="arch_box_2_desc">Orquestación en AWS EKS con Cilium para redes de ultra-baja latencia, mTLS, seguridad y Terraform/Helm.</p>
           </div>
           <div class="arch-box">
-            <h4 data-i18n="arch_box_3_title">Microservicios & Eventos</h4>
-            <p data-i18n="arch_box_3_desc">APIs de baja latencia con gRPC, Node.js, Go y streaming distribuido desacoplado con Kafka.</p>
+            <h4 data-i18n="arch_box_3_title">APISIX, Traefik & Zero-Trust IAM</h4>
+            <p data-i18n="arch_box_3_desc">Enrutamiento de alto tráfico con APISIX y Traefik, federación Keycloak (OIDC/OAuth 2.0) y políticas de seguridad.</p>
           </div>
           <div class="arch-box">
-            <h4 data-i18n="arch_box_4_title">SRE & Resiliencia</h4>
-            <p data-i18n="arch_box_4_desc">Monitorización en Prometheus/Grafana, mutation testing con Pitest y control SonarQube.</p>
+            <h4 data-i18n="arch_box_4_title">SRE, Telemetría & FinOps</h4>
+            <p data-i18n="arch_box_4_desc">Observabilidad con OpenTelemetry, Datadog y Prometheus, garantía de SLAs y optimización de costes cloud.</p>
           </div>
         </div>
       </div>
@@ -395,24 +400,56 @@
           </div>
         </a>
 
-        <!-- Project 2: Zero-Trust IAM & Mesh Blueprint -->
+        <!-- Project 2: Enterprise Node.js Framework & DevEx SDK -->
+        <div class="project-item" data-category="platform" style="cursor: default;">
+          <div class="project-info">
+            <div class="project-name">
+              <span data-i18n="proj_nodejs_fw_title">Enterprise Node.js Core Framework & DevEx SDK</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_nodejs_fw_desc">Diseño y arquitectura de framework interno en Node.js/TypeScript: abstracción de OpenTelemetry, middleware de autenticación, observabilidad y resiliencia para squads.</p>
+          </div>
+          <div class="project-chips">
+            <span>Node.js / TS</span>
+            <span>OpenTelemetry</span>
+            <span>Zero-Trust Auth</span>
+            <span>DevEx SDK</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Next-Gen Ingress & eBPF Mesh -->
+        <div class="project-item" data-category="platform security" style="cursor: default;">
+          <div class="project-info">
+            <div class="project-name">
+              <span data-i18n="proj_cilium_edge_title">Next-Gen Ingress & eBPF Mesh (Cilium + APISIX / Traefik)</span>
+            </div>
+            <p class="project-detail" data-i18n="proj_cilium_edge_desc">Arquitectura de red de alto rendimiento sobre Kubernetes: CNI y seguridad basada en eBPF con Cilium, observabilidad Hubble y balanceo perimetral dinámico con APISIX y Traefik.</p>
+          </div>
+          <div class="project-chips">
+            <span>Cilium (eBPF)</span>
+            <span>Apache APISIX</span>
+            <span>Traefik</span>
+            <span>Hubble Mesh</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Zero-Trust IAM & Mesh Blueprint -->
         <a href="#case-study" class="project-item tracking-outbound" data-category="platform security" data-tracking="view_case_study_mesh">
           <div class="project-info">
             <div class="project-name">
               <span data-i18n="proj_iam_mesh_title">Zero-Trust IAM & Service Mesh Architecture</span>
               <span class="external-arrow">↓</span>
             </div>
-            <p class="project-detail" data-i18n="proj_iam_mesh_desc">Arquitectura de referencia para gobernanza de identidades (Keycloak SSO), control perimetral con Kong y mTLS en Kubernetes con Istio Service Mesh.</p>
+            <p class="project-detail" data-i18n="proj_iam_mesh_desc">Arquitectura de referencia para gobernanza de identidades (Keycloak SSO), control perimetral y mTLS en Kubernetes con Istio Service Mesh.</p>
           </div>
           <div class="project-chips">
             <span>Keycloak</span>
             <span>Istio Mesh</span>
             <span>Kong API</span>
-            <span>Kubernetes</span>
+            <span>AWS EKS</span>
           </div>
         </a>
 
-        <!-- Project 3: Event-Driven Microservices Blueprint -->
+        <!-- Project 5: High-Throughput Distributed Event Streams -->
         <div class="project-item" data-category="platform" style="cursor: default;">
           <div class="project-info">
             <div class="project-name">
@@ -424,23 +461,7 @@
             <span>Apache Kafka</span>
             <span>Redis</span>
             <span>gRPC</span>
-            <span>Node.js / Go</span>
-          </div>
-        </div>
-
-        <!-- Project 4: Cloud-Native Platform Scaffolding -->
-        <div class="project-item" data-category="platform security" style="cursor: default;">
-          <div class="project-info">
-            <div class="project-name">
-              <span data-i18n="proj_gitops_title">Cloud-Native Platform Scaffolding & GitOps</span>
-            </div>
-            <p class="project-detail" data-i18n="proj_gitops_desc">Estandarización de infraestructura y charts de Helm sobre AWS EKS con compliance bancario, observabilidad Prometheus y pipelines CI/CD automatizados.</p>
-          </div>
-          <div class="project-chips">
-            <span>AWS EKS</span>
-            <span>Helm</span>
-            <span>GitOps</span>
-            <span>Prometheus</span>
+            <span>GitOps / Helm</span>
           </div>
         </div>
       </div>
